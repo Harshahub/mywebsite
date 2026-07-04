@@ -3,9 +3,9 @@ pipeline {
 
     environment {
         // Phase 1: Docker Hub. Phase 2: swap to ECR repo URI.
-        DOCKER_IMAGE   = "harshadocker13/pipeline-lab"
+        DOCKER_IMAGE   = "harshadocker13/mywebsite"
         IMAGE_TAG      = "${env.BUILD_NUMBER}"
-        DOCKERHUB_CRED = "dockerhub-creds"   // Jenkins credential ID, configure in Manage Jenkins > Credentials
+        DOCKERHUB_CRED = "dockerhub-creds"   // Jenkins credential ID, configure in Manage Jenkins > Credentials.
         
     }
 
@@ -13,7 +13,7 @@ pipeline {
 
         stage('Checkout') {
             steps {
-                git branch: 'main', url: 'https://github.com/Harshahub/Javaspringdemo.git'
+                git branch: 'main', url: 'https://github.com/Harshahub/mywebsite.git'
             }
         }
 
@@ -23,24 +23,24 @@ pipeline {
             //}
         //}
 		stage('Build') {
-		environment {
+		//environment {
         // This targets the JDK 17 compiler you just installed
-        JAVA_HOME = '/usr/lib/jvm/java-17-openjdk-amd64'
-		}
+        //JAVA_HOME = '/usr/lib/jvm/java-17-openjdk-amd64'
+		//}
 			steps {
-				sh 'mvn clean package -DskipTests'
+				sh 'echo "Static site build step — nothing to compile"'
 			}
 		}
 
-        stage('Unit Tests') {
+        stage('Lint HTML') {
             steps {
-                sh 'mvn test'
+                sh 'echo "Linting HTML/CSS/JS — optional"''
             }
-            post {
-                always {
-                    junit 'target/surefire-reports/*.xml'
-                }
-            }
+            //post {
+              //  always {
+                //    junit 'target/surefire-reports/*.xml'
+                //}
+            //}
         }
 
         stage('Build Docker Image') {
