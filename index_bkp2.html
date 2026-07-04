@@ -1,0 +1,574 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Onboard Digital – Website Designer Pune | onboarditsm.com</title>
+<meta name="description" content="Professional website design starting at ₹4,999. SEO, AI Tools, Google Ads. Serving Pune, Hyderabad, Vizag. Call Suneetha: 9866350336">
+<link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;500;600;700;800;900&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root {
+  --primary: #6C63FF;
+  --secondary: #FF6584;
+  --green: #43D9A2;
+  --yellow: #FFD166;
+  --orange: #FF9A3C;
+  --light: #F8F7FF;
+  --white: #ffffff;
+  --text: #2D2B55;
+  --text-light: #7B7A9D;
+  --border: #E8E6FF;
+  --font-head: 'Nunito', sans-serif;
+  --font-body: 'Poppins', sans-serif;
+  --shadow: 0 8px 32px rgba(108,99,255,0.12);
+  --shadow-card: 0 4px 20px rgba(0,0,0,0.08);
+}
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; }
+body { background: var(--white); color: var(--text); font-family: var(--font-body); font-size: 16px; line-height: 1.6; overflow-x: hidden; }
+
+/* NAV */
+nav { position: fixed; top: 0; left: 0; right: 0; z-index: 200; background: rgba(255,255,255,0.95); backdrop-filter: blur(12px); border-bottom: 2px solid var(--border); padding: 0 5%; display: flex; align-items: center; justify-content: space-between; height: 70px; }
+.nav-logo { font-family: var(--font-head); font-size: 1.5rem; font-weight: 900; color: var(--primary); text-decoration: none; }
+.nav-logo span { color: var(--secondary); }
+.nav-links { display: flex; gap: 32px; list-style: none; }
+.nav-links a { font-size: 0.88rem; font-weight: 600; color: var(--text-light); text-decoration: none; transition: color 0.2s; }
+.nav-links a:hover { color: var(--primary); }
+.nav-cta { background: var(--primary); color: var(--white) !important; padding: 10px 24px; border-radius: 50px; font-weight: 700 !important; box-shadow: 0 4px 16px rgba(108,99,255,0.3); }
+
+/* HERO */
+.hero { min-height: 100vh; padding: 110px 5% 60px; background: linear-gradient(135deg, #F8F7FF 0%, #FFF0F5 50%, #F0FFFA 100%); display: flex; align-items: center; position: relative; overflow: hidden; }
+.hero-blob1 { position: absolute; width: 500px; height: 500px; background: radial-gradient(circle, rgba(108,99,255,0.12) 0%, transparent 70%); top: -100px; right: -100px; border-radius: 50%; }
+.hero-blob2 { position: absolute; width: 400px; height: 400px; background: radial-gradient(circle, rgba(255,101,132,0.10) 0%, transparent 70%); bottom: -80px; left: -80px; border-radius: 50%; }
+.hero-inner { display: grid; grid-template-columns: 1fr 1fr; gap: 60px; align-items: center; position: relative; z-index: 2; width: 100%; max-width: 1200px; margin: 0 auto; }
+.hero-badge { display: inline-flex; align-items: center; gap: 8px; background: var(--white); border: 2px solid var(--border); padding: 8px 18px; border-radius: 50px; font-size: 0.8rem; font-weight: 700; color: var(--primary); margin-bottom: 24px; box-shadow: var(--shadow-card); animation: fadeUp 0.5s ease both; }
+.live-dot { width: 8px; height: 8px; background: var(--green); border-radius: 50%; animation: livePulse 1.5s infinite; }
+@keyframes livePulse { 0%,100% { box-shadow: 0 0 0 0 rgba(67,217,162,0.5); } 50% { box-shadow: 0 0 0 6px rgba(67,217,162,0); } }
+.hero h1 { font-family: var(--font-head); font-size: clamp(2.4rem, 4.5vw, 3.8rem); font-weight: 900; line-height: 1.15; letter-spacing: -1px; margin-bottom: 20px; animation: fadeUp 0.5s 0.1s ease both; color: var(--text); }
+.hero h1 .highlight { color: var(--primary); position: relative; display: inline-block; }
+.hero h1 .highlight::after { content: ''; position: absolute; bottom: 2px; left: 0; right: 0; height: 6px; background: var(--yellow); border-radius: 4px; z-index: -1; opacity: 0.6; }
+.hero h1 .pink { color: var(--secondary); }
+.hero-sub { font-size: 1rem; color: var(--text-light); margin-bottom: 36px; max-width: 460px; line-height: 1.8; animation: fadeUp 0.5s 0.2s ease both; }
+.hero-btns { display: flex; gap: 14px; flex-wrap: wrap; animation: fadeUp 0.5s 0.3s ease both; }
+.btn-primary { background: var(--primary); color: var(--white); font-family: var(--font-head); font-weight: 800; font-size: 0.95rem; padding: 14px 30px; border-radius: 50px; text-decoration: none; box-shadow: 0 6px 20px rgba(108,99,255,0.35); transition: transform 0.2s; display: inline-flex; align-items: center; gap: 8px; }
+.btn-primary:hover { transform: translateY(-3px); }
+.btn-wa { background: #25D366; color: var(--white); font-family: var(--font-head); font-weight: 800; font-size: 0.95rem; padding: 14px 30px; border-radius: 50px; text-decoration: none; box-shadow: 0 6px 20px rgba(37,211,102,0.3); transition: transform 0.2s; display: inline-flex; align-items: center; gap: 8px; }
+.btn-wa:hover { transform: translateY(-3px); }
+.hero-stats { display: flex; gap: 32px; margin-top: 44px; padding-top: 32px; border-top: 2px dashed var(--border); animation: fadeUp 0.5s 0.4s ease both; flex-wrap: wrap; }
+.stat-num { font-family: var(--font-head); font-size: 1.8rem; font-weight: 900; color: var(--primary); }
+.stat-label { font-size: 0.75rem; color: var(--text-light); font-weight: 500; margin-top: 2px; }
+
+/* Hero Visual */
+.hero-visual { position: relative; animation: fadeUp 0.5s 0.2s ease both; }
+.hero-card { background: var(--white); border-radius: 24px; padding: 28px; box-shadow: 0 20px 60px rgba(108,99,255,0.15); border: 2px solid var(--border); }
+.hero-card-title { font-family: var(--font-head); font-size: 1rem; font-weight: 800; color: var(--text); margin-bottom: 20px; }
+.service-pill { display: inline-flex; align-items: center; gap: 8px; padding: 10px 18px; border-radius: 50px; font-size: 0.85rem; font-weight: 700; margin: 6px 4px; cursor: default; transition: transform 0.2s; }
+.service-pill:hover { transform: scale(1.05); }
+.pill-purple { background: #EDE9FF; color: var(--primary); }
+.pill-pink { background: #FFE9EF; color: var(--secondary); }
+.pill-green { background: #E6FFF7; color: #1A9E74; }
+.pill-yellow { background: #FFF8E1; color: #B8860B; }
+.pill-orange { background: #FFF0E1; color: #B85C00; }
+.hero-floating { position: absolute; background: var(--white); border-radius: 16px; padding: 14px 18px; box-shadow: 0 8px 24px rgba(0,0,0,0.12); font-size: 0.82rem; font-weight: 700; display: flex; align-items: center; gap: 8px; border: 2px solid var(--border); animation: float 3s ease-in-out infinite; }
+.float1 { top: -20px; right: -20px; animation-delay: 0s; }
+.float2 { bottom: -20px; left: -20px; animation-delay: 1s; }
+@keyframes float { 0%,100% { transform: translateY(0); } 50% { transform: translateY(-8px); } }
+@keyframes fadeUp { from { opacity: 0; transform: translateY(24px); } to { opacity: 1; transform: translateY(0); } }
+
+/* MARQUEE */
+.marquee-wrap { background: var(--primary); padding: 14px 0; overflow: hidden; }
+.marquee-track { display: flex; gap: 40px; animation: marquee 22s linear infinite; white-space: nowrap; }
+.marquee-item { display: flex; align-items: center; gap: 10px; font-family: var(--font-head); font-size: 0.85rem; font-weight: 700; color: rgba(255,255,255,0.85); flex-shrink: 0; }
+.m-star { color: var(--yellow); }
+@keyframes marquee { from { transform: translateX(0); } to { transform: translateX(-50%); } }
+
+/* SECTIONS */
+section { padding: 90px 5%; }
+.section-label { display: inline-flex; align-items: center; gap: 8px; background: #EDE9FF; color: var(--primary); font-size: 0.75rem; font-weight: 800; text-transform: uppercase; letter-spacing: 1.5px; padding: 6px 16px; border-radius: 50px; margin-bottom: 16px; }
+.section-title { font-family: var(--font-head); font-size: clamp(1.8rem, 3.5vw, 2.8rem); font-weight: 900; color: var(--text); letter-spacing: -0.5px; line-height: 1.2; margin-bottom: 14px; }
+.section-sub { font-size: 0.95rem; color: var(--text-light); max-width: 480px; line-height: 1.8; }
+.section-center { text-align: center; }
+.section-center .section-sub { margin: 0 auto; }
+
+/* SERVICES */
+.services { background: var(--light); }
+.services-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 24px; margin-top: 52px; }
+.svc-card { background: var(--white); border-radius: 20px; padding: 32px 28px; border: 2px solid var(--border); transition: transform 0.2s, box-shadow 0.2s, border-color 0.2s; position: relative; overflow: hidden; }
+.svc-card::before { content: ''; position: absolute; top: 0; left: 0; right: 0; height: 4px; border-radius: 20px 20px 0 0; }
+.svc-card.c1::before { background: var(--primary); }
+.svc-card.c2::before { background: var(--secondary); }
+.svc-card.c3::before { background: var(--green); }
+.svc-card.c4::before { background: var(--orange); }
+.svc-card.c5::before { background: var(--yellow); }
+.svc-card.c6::before { background: #A78BFA; }
+.svc-card:hover { transform: translateY(-6px); box-shadow: 0 16px 40px rgba(108,99,255,0.15); border-color: var(--primary); }
+.svc-icon { width: 56px; height: 56px; border-radius: 16px; display: flex; align-items: center; justify-content: center; font-size: 1.5rem; margin-bottom: 20px; }
+.svc-card.c1 .svc-icon { background: #EDE9FF; }
+.svc-card.c2 .svc-icon { background: #FFE9EF; }
+.svc-card.c3 .svc-icon { background: #E6FFF7; }
+.svc-card.c4 .svc-icon { background: #FFF0E1; }
+.svc-card.c5 .svc-icon { background: #FFF8E1; }
+.svc-card.c6 .svc-icon { background: #F3F0FF; }
+.svc-title { font-family: var(--font-head); font-size: 1.1rem; font-weight: 800; color: var(--text); margin-bottom: 10px; }
+.svc-desc { font-size: 0.875rem; color: var(--text-light); line-height: 1.7; margin-bottom: 18px; }
+.svc-price { font-family: var(--font-head); font-size: 1rem; font-weight: 800; color: var(--primary); }
+
+/* PROCESS */
+.process { background: var(--white); }
+.process-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 0; margin-top: 52px; position: relative; }
+.process-grid::before { content: ''; position: absolute; top: 40px; left: 12.5%; right: 12.5%; height: 3px; background: linear-gradient(90deg, var(--primary), var(--secondary), var(--green), var(--orange)); border-radius: 4px; z-index: 0; }
+.process-step { text-align: center; padding: 0 20px; position: relative; z-index: 1; }
+.step-circle { width: 80px; height: 80px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 1.8rem; margin: 0 auto 20px; border: 4px solid var(--white); box-shadow: 0 4px 16px rgba(0,0,0,0.1); }
+.step-circle.s1 { background: #EDE9FF; }
+.step-circle.s2 { background: #FFE9EF; }
+.step-circle.s3 { background: #E6FFF7; }
+.step-circle.s4 { background: #FFF8E1; }
+.step-num { font-family: var(--font-head); font-size: 0.72rem; font-weight: 800; color: var(--primary); text-transform: uppercase; letter-spacing: 1px; margin-bottom: 6px; }
+.step-title { font-family: var(--font-head); font-size: 1rem; font-weight: 800; color: var(--text); margin-bottom: 8px; }
+.step-desc { font-size: 0.82rem; color: var(--text-light); line-height: 1.6; }
+
+/* PRICING */
+.pricing { background: var(--light); }
+.pricing-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; margin-top: 52px; max-width: 960px; margin-left: auto; margin-right: auto; }
+.price-card { background: var(--white); border: 2px solid var(--border); border-radius: 24px; padding: 36px 28px; position: relative; transition: transform 0.2s, box-shadow 0.2s; }
+.price-card:hover { transform: translateY(-6px); box-shadow: var(--shadow); }
+.price-card.popular { border-color: var(--primary); background: linear-gradient(135deg, #6C63FF 0%, #8B7CF6 100%); color: var(--white); transform: scale(1.04); }
+.popular-badge { position: absolute; top: -14px; left: 50%; transform: translateX(-50%); background: var(--yellow); color: var(--text); font-size: 0.72rem; font-weight: 800; padding: 5px 16px; border-radius: 50px; white-space: nowrap; }
+.plan-name { font-family: var(--font-head); font-size: 0.8rem; font-weight: 800; text-transform: uppercase; letter-spacing: 1px; margin-bottom: 12px; opacity: 0.7; }
+.plan-price { font-family: var(--font-head); font-size: 2.4rem; font-weight: 900; margin-bottom: 6px; line-height: 1; }
+.plan-price span { font-size: 1rem; font-weight: 600; opacity: 0.7; }
+.plan-period { font-size: 0.8rem; opacity: 0.6; margin-bottom: 24px; }
+.plan-features { list-style: none; display: flex; flex-direction: column; gap: 10px; margin-bottom: 28px; }
+.plan-features li { font-size: 0.85rem; display: flex; align-items: center; gap: 10px; }
+.plan-features li::before { content: '✓'; font-weight: 800; color: var(--green); flex-shrink: 0; }
+.price-card.popular .plan-features li::before { color: var(--yellow); }
+.plan-btn { display: block; text-align: center; padding: 12px; border-radius: 50px; font-family: var(--font-head); font-weight: 800; font-size: 0.9rem; text-decoration: none; transition: transform 0.2s; }
+.plan-btn:hover { transform: translateY(-2px); }
+.btn-outline-plan { border: 2px solid var(--primary); color: var(--primary); }
+.btn-filled-plan { background: var(--white); color: var(--primary); box-shadow: 0 4px 16px rgba(0,0,0,0.15); }
+
+/* CLIENTS */
+.clients-section { background: var(--white); }
+.clients-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 24px; margin-top: 52px; }
+.client-card { background: var(--light); border: 2px solid var(--border); border-radius: 20px; padding: 28px; transition: transform 0.2s, box-shadow 0.2s; }
+.client-card:hover { transform: translateY(-4px); box-shadow: var(--shadow); }
+.client-emoji { font-size: 2rem; margin-bottom: 14px; }
+.client-name { font-family: var(--font-head); font-size: 1.05rem; font-weight: 800; color: var(--text); margin-bottom: 4px; }
+.client-type { font-size: 0.75rem; font-weight: 700; color: var(--primary); text-transform: uppercase; letter-spacing: 1px; margin-bottom: 12px; }
+.client-desc { font-size: 0.85rem; color: var(--text-light); line-height: 1.7; }
+.client-link { display: inline-flex; align-items: center; gap: 6px; margin-top: 14px; font-size: 0.8rem; font-weight: 700; color: var(--primary); text-decoration: none; }
+.client-link:hover { text-decoration: underline; }
+
+/* CONTACT */
+.contact-section { background: var(--light); }
+.contact-grid { display: grid; grid-template-columns: 1fr 1.2fr; gap: 60px; margin-top: 52px; align-items: start; }
+.contact-info { display: flex; flex-direction: column; gap: 16px; }
+.contact-item { background: var(--white); border: 2px solid var(--border); border-radius: 16px; padding: 18px 22px; display: flex; gap: 14px; align-items: center; transition: border-color 0.2s; }
+.contact-item:hover { border-color: var(--primary); }
+.contact-icon { width: 46px; height: 46px; border-radius: 14px; background: #EDE9FF; display: flex; align-items: center; justify-content: center; font-size: 1.3rem; flex-shrink: 0; }
+.contact-label { font-size: 0.72rem; text-transform: uppercase; letter-spacing: 1px; color: var(--text-light); font-weight: 700; margin-bottom: 4px; }
+.contact-value { font-size: 0.92rem; font-weight: 600; color: var(--text); }
+.contact-value a { color: var(--primary); text-decoration: none; }
+.contact-value a:hover { text-decoration: underline; }
+.map-container { border-radius: 20px; overflow: hidden; border: 2px solid var(--border); box-shadow: var(--shadow-card); margin-top: 16px; }
+.map-container iframe { display: block; width: 100%; height: 210px; border: none; }
+.map-label { background: var(--white); padding: 12px 18px; font-size: 0.8rem; color: var(--text-light); display: flex; align-items: center; gap: 8px; border-top: 2px solid var(--border); font-weight: 600; }
+.contact-form { background: var(--white); border-radius: 24px; padding: 36px; border: 2px solid var(--border); box-shadow: var(--shadow-card); }
+.form-title { font-family: var(--font-head); font-size: 1.3rem; font-weight: 900; color: var(--text); margin-bottom: 24px; }
+.form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin-bottom: 16px; }
+.form-group { display: flex; flex-direction: column; gap: 6px; margin-bottom: 16px; }
+.form-group label { font-size: 0.78rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.8px; color: var(--text-light); }
+.form-group input, .form-group select, .form-group textarea { background: var(--light); border: 2px solid var(--border); color: var(--text); padding: 12px 16px; border-radius: 12px; font-family: var(--font-body); font-size: 0.9rem; outline: none; transition: border-color 0.2s, box-shadow 0.2s; resize: none; }
+.form-group input:focus, .form-group select:focus, .form-group textarea:focus { border-color: var(--primary); box-shadow: 0 0 0 4px rgba(108,99,255,0.1); }
+.form-submit { background: linear-gradient(135deg, var(--primary), #8B7CF6); color: var(--white); font-family: var(--font-head); font-weight: 800; font-size: 1rem; padding: 14px 32px; border: none; border-radius: 50px; cursor: pointer; width: 100%; transition: transform 0.2s, box-shadow 0.2s; box-shadow: 0 6px 20px rgba(108,99,255,0.35); }
+.form-submit:hover { transform: translateY(-2px); box-shadow: 0 10px 28px rgba(108,99,255,0.4); }
+.form-success { display: none; background: #E6FFF7; border: 2px solid var(--green); border-radius: 12px; padding: 16px; text-align: center; font-size: 0.9rem; font-weight: 600; color: #1A9E74; margin-top: 16px; }
+
+/* FOOTER */
+footer { background: var(--text); color: rgba(255,255,255,0.7); padding: 32px 5%; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 16px; }
+.footer-logo { font-family: var(--font-head); font-weight: 900; font-size: 1.1rem; color: var(--white); }
+.footer-logo span { color: var(--secondary); }
+.footer-text { font-size: 0.82rem; }
+.footer-links { display: flex; gap: 20px; }
+.footer-links a { font-size: 0.82rem; color: rgba(255,255,255,0.5); text-decoration: none; }
+.footer-links a:hover { color: var(--white); }
+
+/* WA FLOAT */
+.wa-float { position: fixed; bottom: 104px; right: 28px; width: 54px; height: 54px; background: #25D366; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 1.5rem; z-index: 490; box-shadow: 0 4px 20px rgba(37,211,102,0.4); text-decoration: none; transition: transform 0.2s; }
+.wa-float:hover { transform: scale(1.1); }
+
+/* CHATBOT */
+.chat-btn { position: fixed; bottom: 28px; right: 28px; width: 62px; height: 62px; background: linear-gradient(135deg, var(--primary), #8B7CF6); border-radius: 50%; border: none; cursor: pointer; display: flex; align-items: center; justify-content: center; font-size: 1.5rem; z-index: 600; box-shadow: 0 6px 24px rgba(108,99,255,0.45); transition: transform 0.2s; }
+.chat-btn:hover { transform: scale(1.08); }
+.chat-badge { position: absolute; top: -3px; right: -3px; width: 20px; height: 20px; background: var(--secondary); color: var(--white); border-radius: 50%; font-size: 0.65rem; font-weight: 800; display: flex; align-items: center; justify-content: center; animation: badgePop 1s infinite; }
+@keyframes badgePop { 0%,100% { transform: scale(1); } 50% { transform: scale(1.2); } }
+.chat-window { position: fixed; bottom: 104px; right: 28px; width: 360px; max-height: 540px; background: var(--white); border: 2px solid var(--border); border-radius: 24px; z-index: 599; display: flex; flex-direction: column; overflow: hidden; box-shadow: 0 20px 60px rgba(108,99,255,0.2); transform: scale(0.85) translateY(20px); opacity: 0; pointer-events: none; transition: all 0.3s cubic-bezier(0.34, 1.56, 0.64, 1); }
+.chat-window.open { transform: scale(1) translateY(0); opacity: 1; pointer-events: all; }
+.chat-header { background: linear-gradient(135deg, var(--primary), #8B7CF6); padding: 18px 20px; display: flex; align-items: center; gap: 12px; flex-shrink: 0; }
+.chat-av { width: 42px; height: 42px; background: rgba(255,255,255,0.2); border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 1.2rem; border: 2px solid rgba(255,255,255,0.3); }
+.chat-name { font-family: var(--font-head); font-weight: 800; font-size: 0.95rem; color: var(--white); }
+.chat-status { font-size: 0.72rem; color: rgba(255,255,255,0.7); display: flex; align-items: center; gap: 5px; }
+.chat-status::before { content: ''; width: 7px; height: 7px; background: var(--green); border-radius: 50%; display: inline-block; }
+.chat-x { margin-left: auto; background: none; border: none; color: rgba(255,255,255,0.7); font-size: 1.2rem; cursor: pointer; }
+.chat-msgs { flex: 1; overflow-y: auto; padding: 20px; display: flex; flex-direction: column; gap: 10px; background: #FAFAFA; scrollbar-width: thin; }
+.bubble { max-width: 85%; padding: 11px 15px; border-radius: 16px; font-size: 0.875rem; line-height: 1.55; animation: bubblePop 0.25s ease; white-space: pre-wrap; }
+@keyframes bubblePop { from { opacity: 0; transform: scale(0.9) translateY(6px); } to { opacity: 1; transform: scale(1) translateY(0); } }
+.bot-bubble { background: var(--white); color: var(--text); border: 2px solid var(--border); border-bottom-left-radius: 4px; align-self: flex-start; box-shadow: 0 2px 8px rgba(0,0,0,0.06); }
+.user-bubble { background: linear-gradient(135deg, var(--primary), #8B7CF6); color: var(--white); border-bottom-right-radius: 4px; align-self: flex-end; font-weight: 600; }
+.chat-opts { padding: 0 16px 12px; display: flex; flex-direction: column; gap: 8px; background: #FAFAFA; }
+.opt-btn { background: var(--white); border: 2px solid var(--border); color: var(--text); padding: 10px 16px; border-radius: 50px; font-family: var(--font-body); font-size: 0.84rem; font-weight: 600; cursor: pointer; text-align: left; transition: border-color 0.2s, background 0.2s, color 0.2s; }
+.opt-btn:hover { border-color: var(--primary); background: #EDE9FF; color: var(--primary); }
+.typing { display: flex; gap: 5px; padding: 12px 16px; background: var(--white); border: 2px solid var(--border); border-radius: 16px; border-bottom-left-radius: 4px; align-self: flex-start; width: fit-content; }
+.typing span { width: 7px; height: 7px; background: var(--primary); border-radius: 50%; opacity: 0.4; animation: typeDot 1.2s infinite; }
+.typing span:nth-child(2) { animation-delay: 0.2s; }
+.typing span:nth-child(3) { animation-delay: 0.4s; }
+@keyframes typeDot { 0%,80%,100% { transform: translateY(0); opacity: 0.4; } 40% { transform: translateY(-6px); opacity: 1; } }
+.chat-inp-row { padding: 12px 16px; border-top: 2px solid var(--border); display: flex; gap: 10px; background: var(--white); flex-shrink: 0; }
+.chat-inp { flex: 1; background: var(--light); border: 2px solid var(--border); color: var(--text); padding: 10px 16px; border-radius: 50px; font-family: var(--font-body); font-size: 0.85rem; outline: none; transition: border-color 0.2s; }
+.chat-inp:focus { border-color: var(--primary); }
+.chat-send { width: 40px; height: 40px; background: var(--primary); border: none; border-radius: 50%; color: var(--white); font-size: 1rem; cursor: pointer; display: flex; align-items: center; justify-content: center; flex-shrink: 0; }
+
+/* RESPONSIVE */
+@media (max-width: 900px) {
+  .hero-inner { grid-template-columns: 1fr; }
+  .hero-visual { display: none; }
+  .process-grid { grid-template-columns: 1fr 1fr; }
+  .process-grid::before { display: none; }
+  .pricing-grid { grid-template-columns: 1fr; max-width: 400px; margin-top: 52px; }
+  .price-card.popular { transform: none; }
+  .contact-grid { grid-template-columns: 1fr; }
+  .nav-links { display: none; }
+  .chat-window { width: calc(100vw - 40px); right: 20px; bottom: 96px; }
+}
+@media (max-width: 600px) {
+  section { padding: 60px 5%; }
+  .form-row { grid-template-columns: 1fr; }
+  .process-grid { grid-template-columns: 1fr; }
+}
+</style>
+</head>
+<body>
+
+<nav>
+  <a href="#" class="nav-logo">Onboard<span>.</span>Digital</a>
+  <ul class="nav-links">
+    <li><a href="#services">Services</a></li>
+    <li><a href="#process">How it Works</a></li>
+    <li><a href="#pricing">Pricing</a></li>
+    <li><a href="#clients">Clients</a></li>
+    <li><a href="#contact" class="nav-cta">Get a Quote</a></li>
+  </ul>
+</nav>
+
+<section class="hero">
+  <div class="hero-blob1"></div>
+  <div class="hero-blob2"></div>
+  <div class="hero-inner">
+    <div>
+      <div class="hero-badge"><span class="live-dot"></span> Trusted by businesses across India</div>
+      <h1>Your Business Needs a <span class="highlight">Beautiful</span> <span class="pink">Website!</span></h1>
+      <p class="hero-sub">Professional, mobile-friendly websites starting at just ₹4,999. Ready in 7 days. SEO included. WhatsApp support always. 🚀</p>
+      <div class="hero-btns">
+        <a href="https://wa.me/919866350336?text=Hi%20Suneetha!%20I%20want%20a%20website%20quote." target="_blank" class="btn-wa">💬 WhatsApp Us</a>
+        <a href="#services" class="btn-primary">View Services →</a>
+      </div>
+      <div class="hero-stats">
+        <div class="stat"><div class="stat-num">10+</div><div class="stat-label">Websites Delivered</div></div>
+        <div class="stat"><div class="stat-num">7 Days</div><div class="stat-label">Avg. Delivery</div></div>
+        <div class="stat"><div class="stat-num">₹4,999</div><div class="stat-label">Starting Price</div></div>
+        <div class="stat"><div class="stat-num">100%</div><div class="stat-label">Satisfaction</div></div>
+      </div>
+    </div>
+    <div class="hero-visual">
+      <div style="position:relative;">
+        <div class="hero-floating float1">🎉 Website Live! <strong style="color:var(--green)">Go!</strong></div>
+        <div class="hero-card">
+          <div class="hero-card-title">🎨 What we build for you</div>
+          <div>
+            <span class="service-pill pill-purple">🌐 Business Websites</span>
+            <span class="service-pill pill-pink">📈 SEO Services</span>
+            <span class="service-pill pill-green">🤖 AI Chatbots</span>
+            <span class="service-pill pill-yellow">📣 Google Ads</span>
+            <span class="service-pill pill-orange">✍️ Content Writing</span>
+            <span class="service-pill pill-purple">🏫 School Sites</span>
+            <span class="service-pill pill-pink">💈 Salon Sites</span>
+            <span class="service-pill pill-green">🏥 Clinic Sites</span>
+          </div>
+        </div>
+        <div class="hero-floating float2">📞 New Lead! <strong style="color:var(--primary)">+1</strong></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="marquee-wrap">
+  <div class="marquee-track">
+    <div class="marquee-item"><span class="m-star">★</span> Website Design</div>
+    <div class="marquee-item"><span class="m-star">★</span> SEO & Content</div>
+    <div class="marquee-item"><span class="m-star">★</span> AI Chatbots</div>
+    <div class="marquee-item"><span class="m-star">★</span> Google Ads</div>
+    <div class="marquee-item"><span class="m-star">★</span> Mobile Friendly</div>
+    <div class="marquee-item"><span class="m-star">★</span> 7-Day Delivery</div>
+    <div class="marquee-item"><span class="m-star">★</span> WhatsApp Integration</div>
+    <div class="marquee-item"><span class="m-star">★</span> Affordable Pricing</div>
+    <div class="marquee-item"><span class="m-star">★</span> Website Design</div>
+    <div class="marquee-item"><span class="m-star">★</span> SEO & Content</div>
+    <div class="marquee-item"><span class="m-star">★</span> AI Chatbots</div>
+    <div class="marquee-item"><span class="m-star">★</span> Google Ads</div>
+    <div class="marquee-item"><span class="m-star">★</span> Mobile Friendly</div>
+    <div class="marquee-item"><span class="m-star">★</span> 7-Day Delivery</div>
+    <div class="marquee-item"><span class="m-star">★</span> WhatsApp Integration</div>
+    <div class="marquee-item"><span class="m-star">★</span> Affordable Pricing</div>
+  </div>
+</div>
+
+<section class="services" id="services">
+  <div class="section-center">
+    <div class="section-label">💼 What We Offer</div>
+    <h2 class="section-title">Services for Every Business</h2>
+    <p class="section-sub">From website design to Google Ads — everything your business needs to shine online.</p>
+  </div>
+  <div class="services-grid">
+    <div class="svc-card c1"><div class="svc-icon">🌐</div><div class="svc-title">Website Design</div><div class="svc-desc">Mobile-first, fast-loading websites with WhatsApp integration. Looks great on every device.</div><div class="svc-price">Starting ₹4,999</div></div>
+    <div class="svc-card c2"><div class="svc-icon">📈</div><div class="svc-title">SEO Optimization</div><div class="svc-desc">Get found on Google with the right keywords so customers find you without paying for ads.</div><div class="svc-price">Starting ₹3,000</div></div>
+    <div class="svc-card c3"><div class="svc-icon">🤖</div><div class="svc-title">AI Chatbot</div><div class="svc-desc">24/7 smart chatbot that answers questions, captures leads and books appointments automatically.</div><div class="svc-price">Starting ₹6,000</div></div>
+    <div class="svc-card c4"><div class="svc-icon">📣</div><div class="svc-title">Google Ads</div><div class="svc-desc">Get immediate calls and leads from Google. We manage your ads so every rupee gives results.</div><div class="svc-price">₹3,000 / month</div></div>
+    <div class="svc-card c5"><div class="svc-icon">✍️</div><div class="svc-title">Content Writing</div><div class="svc-desc">Professional, SEO-friendly content for every page. Words that convert visitors into customers.</div><div class="svc-price">Starting ₹1,500</div></div>
+    <div class="svc-card c6"><div class="svc-icon">🔧</div><div class="svc-title">Website Maintenance</div><div class="svc-desc">Regular updates, speed checks and content changes so your website stays fresh and fast.</div><div class="svc-price">₹999 / month</div></div>
+  </div>
+</section>
+
+<section class="process" id="process">
+  <div class="section-center">
+    <div class="section-label">⚡ How It Works</div>
+    <h2 class="section-title">From Idea to Live in 7 Days!</h2>
+    <p class="section-sub">Simple, fast and stress-free. No technical knowledge needed from your side.</p>
+  </div>
+  <div class="process-grid">
+    <div class="process-step"><div class="step-circle s1">📞</div><div class="step-num">Step 01</div><div class="step-title">Discovery Call</div><div class="step-desc">We understand your business and goals in a quick WhatsApp or phone call.</div></div>
+    <div class="process-step"><div class="step-circle s2">🎨</div><div class="step-num">Step 02</div><div class="step-title">Design & Build</div><div class="step-desc">We design and develop your complete website with all content and features.</div></div>
+    <div class="process-step"><div class="step-circle s3">✅</div><div class="step-num">Step 03</div><div class="step-title">Review & Revise</div><div class="step-desc">You review and we make changes until you are 100% happy!</div></div>
+    <div class="process-step"><div class="step-circle s4">🚀</div><div class="step-num">Step 04</div><div class="step-title">Go Live!</div><div class="step-desc">We launch your site, submit to Google and you start getting inquiries! 🎉</div></div>
+  </div>
+</section>
+
+<section class="pricing" id="pricing">
+  <div class="section-center">
+    <div class="section-label">💰 Pricing</div>
+    <h2 class="section-title">Simple, Honest Pricing</h2>
+    <p class="section-sub">No hidden charges. No surprises. Pay once, own your website forever.</p>
+  </div>
+  <div class="pricing-grid">
+    <div class="price-card">
+      <div class="plan-name">🌱 Starter</div>
+      <div class="plan-price">₹4,999 <span>one time</span></div>
+      <div class="plan-period">Perfect for new businesses</div>
+      <ul class="plan-features">
+        <li>3-page website</li>
+        <li>Mobile friendly design</li>
+        <li>WhatsApp button</li>
+        <li>Contact form</li>
+        <li>Basic SEO setup</li>
+        <li>Delivered in 7 days</li>
+      </ul>
+      <a href="https://wa.me/919866350336?text=Hi!%20I%20want%20the%20Starter%20package%20Rs.4999" target="_blank" class="plan-btn btn-outline-plan">Get Started →</a>
+    </div>
+    <div class="price-card popular">
+      <div class="popular-badge">⭐ Most Popular</div>
+      <div class="plan-name">🚀 Business</div>
+      <div class="plan-price">₹9,999 <span>one time</span></div>
+      <div class="plan-period">Best for growing businesses</div>
+      <ul class="plan-features">
+        <li>5-page website</li>
+        <li>SEO content writing</li>
+        <li>Google Maps embed</li>
+        <li>WhatsApp integration</li>
+        <li>1 month free support</li>
+        <li>Google Search Console</li>
+      </ul>
+      <a href="https://wa.me/919866350336?text=Hi!%20I%20want%20the%20Business%20package%20Rs.9999" target="_blank" class="plan-btn btn-filled-plan">Get Started →</a>
+    </div>
+    <div class="price-card">
+      <div class="plan-name">💎 Premium</div>
+      <div class="plan-price">₹19,999 <span>one time</span></div>
+      <div class="plan-period">For established businesses</div>
+      <ul class="plan-features">
+        <li>10-page website</li>
+        <li>AI chatbot included</li>
+        <li>Google Ads setup</li>
+        <li>Full SEO package</li>
+        <li>3 months free support</li>
+        <li>Monthly SEO report</li>
+      </ul>
+      <a href="https://wa.me/919866350336?text=Hi!%20I%20want%20the%20Premium%20package%20Rs.19999" target="_blank" class="plan-btn btn-outline-plan">Get Started →</a>
+    </div>
+  </div>
+</section>
+
+<section class="clients-section" id="clients">
+  <div class="section-center">
+    <div class="section-label">🏆 Our Work</div>
+    <h2 class="section-title">Businesses We've Helped</h2>
+    <p class="section-sub">Real clients, real websites, real results. We are proud of every project.</p>
+  </div>
+  <div class="clients-grid">
+    <div class="client-card"><div class="client-emoji">🏫</div><div class="client-name">ArQ Valley School</div><div class="client-type">Education · Visakhapatnam</div><div class="client-desc">School website with admissions info, gallery, testimonials and enquiry form for parents.</div><a href="https://arqvalleyschool.com" target="_blank" class="client-link">🔗 arqvalleyschool.com</a></div>
+    <div class="client-card"><div class="client-emoji">🏗️</div><div class="client-name">Arya Engineering & Infra</div><div class="client-type">Civil & Solar · Wardha, Maharashtra</div><div class="client-desc">Corporate site with solar services, careers, WhatsApp integration and map. Pan India targeting.</div><a href="#" class="client-link">🔗 Live Website</a></div>
+    <div class="client-card" style="border:2px dashed var(--border);background:transparent;"><div class="client-emoji">✨</div><div class="client-name">Your Business Here!</div><div class="client-type">Any Industry · Any City</div><div class="client-desc">Salons, clinics, schools, restaurants, shops — we build for all! Let's build yours next.</div><a href="https://wa.me/919866350336?text=Hi%20Suneetha!%20I%20want%20a%20website." target="_blank" class="client-link">💬 Talk to us →</a></div>
+  </div>
+</section>
+
+<section class="contact-section" id="contact">
+  <div class="section-label">📬 Get In Touch</div>
+  <h2 class="section-title">Ready for Your Website?<br>Let's Talk! 😊</h2>
+  <div class="contact-grid">
+    <div>
+      <div class="contact-info">
+        <div class="contact-item">
+          <div class="contact-icon">📱</div>
+          <div><div class="contact-label">Call / WhatsApp</div><div class="contact-value"><a href="tel:+919866350336">+91 98663 50336</a></div><div style="font-size:0.8rem;color:var(--text-light);margin-top:2px;">Suneetha · Mon–Sat 9am–7pm</div></div>
+        </div>
+        <div class="contact-item">
+          <div class="contact-icon">🌐</div>
+          <div><div class="contact-label">Website</div><div class="contact-value"><a href="https://onboarditsm.com" target="_blank">onboarditsm.com</a></div></div>
+        </div>
+        <div class="contact-item">
+          <div class="contact-icon">📍</div>
+          <div><div class="contact-label">Our Office</div><div class="contact-value" style="font-size:0.88rem;line-height:1.7;">Survey No. 9, Samartha Colony, Lane No. 1,<br>Kharadi, Pune – 411014</div></div>
+        </div>
+      </div>
+      <div class="map-container">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3782.2613173522564!2d73.9416!3d18.5512!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bc2c147b8df13ab%3A0x4d49c5d02e7ceec3!2sKharadi%2C%20Pune%2C%20Maharashtra!5e0!3m2!1sen!2sin!4v1680000000000!5m2!1sen!2sin" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        <div class="map-label">📍 Survey No. 9, Samartha Colony, Lane 1, Kharadi, Pune – 411014</div>
+      </div>
+    </div>
+    <div class="contact-form">
+      <div class="form-title">Get a Free Quote! 🎯</div>
+      <div class="form-row">
+        <div class="form-group"><label>Your Name</label><input type="text" id="fname" placeholder="Rahul Sharma"></div>
+        <div class="form-group"><label>Mobile Number</label><input type="tel" id="fmobile" placeholder="9876543210"></div>
+      </div>
+      <div class="form-group"><label>City</label><input type="text" id="fcity" placeholder="Pune / Hyderabad / Vizag..."></div>
+      <div class="form-group">
+        <label>Business Type</label>
+        <select id="fbiz">
+          <option value="">Select your business type</option>
+          <option>🏫 School / College</option>
+          <option>💈 Salon / Spa</option>
+          <option>🏥 Clinic / Hospital</option>
+          <option>🏗️ Construction / Real Estate</option>
+          <option>🍽️ Restaurant / Food</option>
+          <option>🛒 Retail Shop</option>
+          <option>🌞 Solar / Energy</option>
+          <option>🔧 Other</option>
+        </select>
+      </div>
+      <div class="form-group">
+        <label>Package Interested In</label>
+        <select id="fbudget">
+          <option value="">Choose a package</option>
+          <option>🌱 Starter – ₹4,999</option>
+          <option>🚀 Business – ₹9,999</option>
+          <option>💎 Premium – ₹19,999</option>
+          <option>🤔 Not sure yet</option>
+        </select>
+      </div>
+      <div class="form-group"><label>Message (Optional)</label><textarea id="fmsg" rows="3" placeholder="Tell us a bit about your business..."></textarea></div>
+      <button class="form-submit" onclick="submitForm()">Send Enquiry on WhatsApp 💬</button>
+      <div class="form-success" id="formSuccess">✅ Opening WhatsApp... Suneetha will reply within 1 hour!</div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="footer-logo">Onboard<span>.</span>Digital</div>
+  <div class="footer-text">© 2025 Onboard Digital · Kharadi, Pune · Made with ❤️</div>
+  <div class="footer-links">
+    <a href="#services">Services</a>
+    <a href="#pricing">Pricing</a>
+    <a href="#contact">Contact</a>
+    <a href="https://wa.me/919866350336" target="_blank">WhatsApp</a>
+  </div>
+</footer>
+
+<a class="wa-float" href="https://wa.me/919866350336?text=Hi%20Suneetha!%20I%20need%20a%20website." target="_blank">💬</a>
+
+<button class="chat-btn" onclick="toggleChat()" id="chatBtn">
+  <span id="chatIcon">🤖</span>
+  <span class="chat-badge" id="chatBadge">1</span>
+</button>
+
+<div class="chat-window" id="chatWindow">
+  <div class="chat-header">
+    <div class="chat-av">👩‍💼</div>
+    <div>
+      <div class="chat-name">Suneetha · Onboard Digital</div>
+      <div class="chat-status">Online · Replies instantly</div>
+    </div>
+    <button class="chat-x" onclick="toggleChat()">✕</button>
+  </div>
+  <div class="chat-msgs" id="chatMsgs"></div>
+  <div class="chat-opts" id="chatOpts"></div>
+  <div class="chat-inp-row">
+    <input class="chat-inp" id="chatInp" placeholder="Type your message..." onkeydown="if(event.key==='Enter') sendMsg()">
+    <button class="chat-send" onclick="sendMsg()">➤</button>
+  </div>
+</div>
+
+<script>
+function submitForm() {
+  const name = document.getElementById('fname').value.trim();
+  const mobile = document.getElementById('fmobile').value.trim();
+  const city = document.getElementById('fcity').value.trim();
+  const biz = document.getElementById('fbiz').value;
+  const budget = document.getElementById('fbudget').value;
+  const msg = document.getElementById('fmsg').value.trim();
+  if (!name || !mobile) { alert('Please enter your name and mobile number!'); return; }
+  const text = `Hi Suneetha! I want a website.\n\nName: ${name}\nMobile: ${mobile}\nCity: ${city||'Not mentioned'}\nBusiness: ${biz||'Not specified'}\nPackage: ${budget||'Not decided'}\nMessage: ${msg||'-'}`;
+  window.open(`https://wa.me/919866350336?text=${encodeURIComponent(text)}`,'_blank');
+  document.getElementById('formSuccess').style.display='block';
+}
+
+let isOpen=false, started=false;
+const flows={
+  start:{msg:"👋 Hi! I'm Suneetha from Onboard Digital!\n\nHow can I help you today?",opts:[{label:'🌐 I need a new website',next:'website'},{label:'📈 I want SEO for my site',next:'seo'},{label:'🤖 I want an AI Chatbot',next:'chatbot'},{label:'💰 Show me pricing',next:'pricing'},{label:'📞 Talk to Suneetha',next:'talk'}]},
+  website:{msg:"Great! 🎉 We build beautiful websites starting at ₹4,999.\n\nWhat type of business do you have?",opts:[{label:'🏫 School / College',next:'quote'},{label:'💈 Salon / Spa',next:'quote'},{label:'🏥 Clinic / Hospital',next:'quote'},{label:'🏗️ Construction / Solar',next:'quote'},{label:'🛒 Shop / Other',next:'quote'}]},
+  seo:{msg:"📈 Smart! SEO helps your website appear on Google for FREE.\n\nDo you already have a website?",opts:[{label:'✅ Yes I have a website',next:'seo2'},{label:'❌ No website yet',next:'website'}]},
+  seo2:{msg:"Perfect! 🔍 We do a FREE SEO audit first and tell you exactly what needs fixing.\n\nShare your website with Suneetha on WhatsApp!",opts:[{label:'💬 Share on WhatsApp',next:'wa'},{label:'🔙 Back to Menu',next:'start'}]},
+  chatbot:{msg:"🤖 Amazing choice!\n\nYour website will:\n✅ Answer questions 24/7\n✅ Capture leads while you sleep\n✅ Book appointments automatically\n\nStarting at ₹6,000!",opts:[{label:'💬 Get Chatbot Quote',next:'quote'},{label:'🔙 Back to Menu',next:'start'}]},
+  pricing:{msg:"💰 Our Packages:\n\n🌱 Starter – ₹4,999\n3 pages · Mobile friendly · Basic SEO\n\n🚀 Business – ₹9,999 ⭐\n5 pages · SEO content · Google Maps\n\n💎 Premium – ₹19,999\n10 pages · AI Chatbot · Google Ads",opts:[{label:'🌱 Starter – ₹4,999',next:'quote'},{label:'🚀 Business – ₹9,999',next:'quote'},{label:'💎 Premium – ₹19,999',next:'quote'}]},
+  quote:{msg:"Wonderful! 🙌 Suneetha will send you a quote within 1 hour.\n\nTap below to connect on WhatsApp 👇",opts:[{label:'💬 Send WhatsApp Message',next:'wa'},{label:'🔙 Back to Menu',next:'start'}]},
+  talk:{msg:"📞 Reach Suneetha:\n\n📱 +91 98663 50336\n💬 WhatsApp same number\n⏰ Mon–Sat, 9am–7pm",opts:[{label:'💬 WhatsApp Now',next:'wa'},{label:'📞 Call Now',next:'call'},{label:'🔙 Back to Menu',next:'start'}]},
+  wa:{action:'wa'},call:{action:'call'}
+};
+
+function toggleChat(){
+  isOpen=!isOpen;
+  document.getElementById('chatWindow').classList.toggle('open',isOpen);
+  document.getElementById('chatIcon').textContent=isOpen?'✕':'🤖';
+  document.getElementById('chatBadge').style.display=isOpen?'none':'flex';
+  if(isOpen&&!started){started=true;setTimeout(()=>runStep('start'),400);}
+}
+
+function addTyping(){return new Promise(res=>{const c=document.getElementById('chatMsgs');const t=document.createElement('div');t.className='typing';t.id='typing';t.innerHTML='<span></span><span></span><span></span>';c.appendChild(t);c.scrollTop=c.scrollHeight;setTimeout(()=>{t.remove();res();},900);});}
+function addBot(text){const c=document.getElementById('chatMsgs');const b=document.createElement('div');b.className='bubble bot-bubble';b.textContent=text;c.appendChild(b);c.scrollTop=c.scrollHeight;}
+function addUser(text){const c=document.getElementById('chatMsgs');const b=document.createElement('div');b.className='bubble user-bubble';b.textContent=text;c.appendChild(b);c.scrollTop=c.scrollHeight;}
+function setOpts(opts){const ct=document.getElementById('chatOpts');ct.innerHTML='';opts.forEach(o=>{const btn=document.createElement('button');btn.className='opt-btn';btn.textContent=o.label;btn.onclick=()=>{addUser(o.label);ct.innerHTML='';setTimeout(()=>runStep(o.next),300);};ct.appendChild(btn);});}
+
+async function runStep(step){
+  const f=flows[step];if(!f)return;
+  if(f.action==='wa'){window.open('https://wa.me/919866350336?text=Hi%20Suneetha!%20I%20want%20a%20website%20quote.','_blank');await addTyping();addBot("Opening WhatsApp! 💬\nSuneetha will reply within 1 hour! 😊");setTimeout(()=>runStep('start'),2500);return;}
+  if(f.action==='call'){window.location.href='tel:+919866350336';return;}
+  await addTyping();if(f.msg)addBot(f.msg);if(f.opts)setOpts(f.opts);
+}
+
+function sendMsg(){
+  const inp=document.getElementById('chatInp');const text=inp.value.trim();if(!text)return;
+  addUser(text);inp.value='';document.getElementById('chatOpts').innerHTML='';
+  setTimeout(async()=>{await addTyping();addBot("Thanks! 😊\n\nFor fastest reply, WhatsApp Suneetha at +91 98663 50336.");setOpts([{label:'💬 WhatsApp Suneetha',next:'wa'},{label:'🔙 Main Menu',next:'start'}]);},400);
+}
+
+setTimeout(()=>{if(!isOpen)toggleChat();},6000);
+</script>
+</body>
+</html>
