@@ -34,7 +34,7 @@ pipeline {
 
         stage('Lint HTML') {
             steps {
-                sh 'echo "Linting HTML/CSS/JS — optional"''
+                sh 'echo "Linting HTML/CSS/JS — optional"'
             }
             //post {
               //  always {
